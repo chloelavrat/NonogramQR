@@ -5,6 +5,8 @@ I like nonograms and I like QR-codes. Both open the door to a new word when scan
 
 To access the message (or website), the player must first fill in the nonogram and then scan it. It is obvious that the longer the message is, the more complicated the nonogram is.
 
+Have fun :)
+
 ## Example
 
 So for QR-code:

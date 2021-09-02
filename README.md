@@ -1,9 +1,9 @@
 # QR-Gram
 > Converter: from QR code to nonograms.
 
-I like nonograms and I like QR-codes. Both open the door to a new word when scanned or completed. That's why I created a fast and dirty python code that transfers a string of characters into a QR-code which is then encoded into a nonogram.
+I like nonograms and I like QR codes. Both open the door to a new word when scanned or completed. That's why I created a quick and dirty python code that transfers a string into a QR-code which is then encoded into a nonogram.
 
-To access the message (or website), the player must first fill in the nonogram and then scan it. It is obvious that the longer the message is, the more complicated the nonogram is.
+To access the message (or website), the player must first fill in the nonogram, then scan it. Obviously, the longer the message, the more complicated the nonogram.
 
 Have fun :)
 

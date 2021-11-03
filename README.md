@@ -47,6 +47,10 @@ You have the nonogram:
           7 2 2
 ```
 
+## Install
+
+``python pip install itertools pyqrcode``
+
 ## Sources
 
 [Reddit - r/dailyprogrammer]( https://www.reddit.com/r/dailyprogrammer/comments/42lhem/20160125_challenge_251_easy_create_nonogram/)

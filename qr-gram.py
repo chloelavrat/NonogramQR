@@ -7,7 +7,8 @@
 # r/TheBlackCat13/
 #----------------------------------------------------------
 from itertools import zip_longest
-import pyqrcode
+import pyqrcode, argparse
+
 
 def get_qrcode(string):
     qr = pyqrcode.create(string)
@@ -81,9 +82,18 @@ def export_csv(pic, filename):
 
 #######################################################
 
-string = ":)"
+if __name__ == "__main__":
+    ## arguments parser 
+    parser=argparse.ArgumentParser(
+        description='''This script change a string into a QR-Code and then convert it into a nonogram.''',
+        epilog="""have fun :)""")
+    parser.add_argument('message', nargs='*', default="https://github.com/azerty-waves", help='put the message to encode here')
+    args=parser.parse_args()
 
-pic_2 = get_qrcode(string)
-print_qrcode(string)
-print_counts(pic_2)
-export_csv(pic_2,"my-nono")
+    ## encode into a nonogram
+    print(">>> String to encode: "+args.message)
+    string = args.message
+    pic_2 = get_qrcode(string)
+    print_qrcode(string)
+    print_counts(pic_2)
+    export_csv(pic_2,"my-nono")

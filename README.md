@@ -1,5 +1,5 @@
 # QR-Gram
-> Converter: from QR code to nonograms.
+> Converter: from string to QR code to nonograms.
 
 I like nonograms and I like QR codes. Both open the door to a new word when scanned or completed. That's why I created a quick and dirty python code that transfers a string into a QR-code which is then encoded into a nonogram.
 
@@ -13,7 +13,7 @@ So for QR-code:
 
 ![qrcode](README.assets/qrcode.png)
 
-You have the nonogram:
+You will have the nonogram:
 
 ```
                       1 1                                
@@ -47,9 +47,17 @@ You have the nonogram:
           7 2 2
 ```
 
+## Usage
+
+```
+python qr-gram.py your-message-to-encode
+```
+
 ## Install
 
-``python pip install itertools pyqrcode``
+```
+$ python pip install itertools pyqrcode argparse
+```
 
 ## Sources
 

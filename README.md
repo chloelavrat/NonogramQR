@@ -79,6 +79,8 @@ $ python qr-gram.py ":)"
     1 1 2 2 1 3
 ```
 
+Note the apparition of a neat csv file named `./my-nono.csv` for easy excel and word integration!
+
 ## Sources
 
 [Reddit - r/dailyprogrammer]( https://www.reddit.com/r/dailyprogrammer/comments/42lhem/20160125_challenge_251_easy_create_nonogram/)

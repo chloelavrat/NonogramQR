@@ -1,5 +1,4 @@
-# QR-Gram
-> Converter: from string to QR code to nonograms.
+![qrcode](README.assets/banner.jpg)
 
 I like nonograms and I like QR codes. Both open the door to a new word when scanned or completed. That's why I created a quick and dirty python code that transfers a string into a QR-code which is then encoded into a nonogram.
 
@@ -7,15 +6,49 @@ To access the message (or website), the player must first fill in the nonogram, 
 
 Have fun :)
 
-## Example
+## Getting Started
 
-So for QR-code:
+In order to use the qr-gram code please do the following: 
+```
+git clone https://github.com/azerty-labs/QR-Gram.git
+cd QR-Gram/
+python -m venv venv
+source ./venv/bin/activate
+python pip install itertools pyqrcode argparse
+python qr-gram.py
+```
 
-![qrcode](README.assets/qrcode.png)
+## Help ?
 
-You will have the nonogram:
+Need help? Use the `-h` command to get some.
 
 ```
+$ python qr-gram.py -h
+usage: qr-gram.py [-h] [message ...]
+
+This script change a string into a QR-Code and then convert it into a nonogram.
+
+positional arguments:
+  message     put the message to encode here
+
+options:
+  -h, --help  show this help message and exit
+
+have fun :)
+```
+
+## Example
+
+This is an example of what qr-gram can do after lauching:
+
+```
+$ python qr-gram.py :)
+```
+
+Here we go : 
+```
+$ python qr-gram.py ":)"
+>>> String to encode: :)
                       1 1                                
                     1 3 3             1         1 1      
                     3 1 1         3 3 1 4       3 3 1    
@@ -44,19 +77,6 @@ You will have the nonogram:
     1 3 1 1 2 3
     1 3 1 2 3 3
     1 1 2 2 1 3
-          7 2 2
-```
-
-## Usage
-
-```
-python qr-gram.py your-message-to-encode
-```
-
-## Install
-
-```
-$ python pip install itertools pyqrcode argparse
 ```
 
 ## Sources

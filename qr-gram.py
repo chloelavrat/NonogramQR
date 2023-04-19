@@ -91,8 +91,8 @@ if __name__ == "__main__":
     args=parser.parse_args()
 
     ## encode into a nonogram
-    print(">>> String to encode: "+args.message)
-    string = args.message
+    print(">>> String to encode: "+args.message[0])
+    string = args.message[0]
     pic_2 = get_qrcode(string)
     print_qrcode(string)
     print_counts(pic_2)

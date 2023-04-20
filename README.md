@@ -42,7 +42,7 @@ have fun :)
 This is an example of what qr-gram can do after lauching:
 
 ```
-$ python qr-gram.py :)
+$ python qr-gram.py ":)"
 ```
 
 Here we go : 

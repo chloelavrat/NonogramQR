@@ -27,6 +27,7 @@ def generate_qr_gram(message):
 
 st.set_page_config(page_title="NonogramQR", page_icon=":gear:")
 st.title("NonogramQR")
+# st.image("banner.png")
 st.subheader("Solve, Scan, Discover: Turn Text into a Puzzle!")
 st.markdown("""**Transform your messages into puzzles!**
             Encode your text or URL into a QR code, hide it within a nonogram puzzle, and challenge yourself or others to reveal and scan the hidden message. Dive into a unique blend of puzzle-solving and QR code functionality.

@@ -1,90 +1,102 @@
-![qrcode](README.assets/banner.jpg)
+<div align="center">
+  <img src="CTA.png" alt="Banner" style="border-radius: 17px; width: 100%; max-width: 800px; height: auto;">
+</div>
 
-I like nonograms and I like QR codes. Both open the door to a new word when scanned or completed. That's why I created a quick and dirty python code that transfers a string into a QR-code which is then encoded into a nonogram.
+<h3 align="center">
+  <b><a href="https://pcb-lullaby.streamlit.app">Online App</a></b>
+  •
+  <b><a href="#python-api">Python API</a></b>
+  •
+  <b><a href="http://www.youtube.com/watch?v=_3DP3HD8CqY">Demo</a></b>
+</h3>
 
-To access the message (or website), the player must first fill in the nonogram, then scan it. Obviously, the longer the message, the more complicated the nonogram.
+<div align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/python-3.12-blue.svg" alt="Python Versions">
+</div>
+</br>
 
-Have fun :)
+<p align="center"><b>NonogramQR</b> is an innovative application that seamlessly integrates the challenge of nonograms with the functionality of QR codes. This app transforms your messages into engaging puzzles, providing a unique and interactive way to reveal hidden information.</p>
 
-## Getting Started
+## How It Works
 
-In order to use the qr-gram code please do the following: 
+- **Message Encoding:** Enter your message or URL into the app or using the python API.
+- **QR Code Generation:** The message is encoded into an hidden QR code.
+- **Nonogram Creation:** The QR code is then converted into a nonogram pdf puzzle.
+- **Puzzle Solving:** Solve the nonogram to reveal the QR code.
+- **Scanning:** Use the app to scan the completed nonogram and access the original message or website.
+
+## Features
+
+- **Customizable Messages:** Encode any string of less than 25 caracter into a NonogramQR.
+- **Puzzle Difficulty:** The complexity of the nonogram adjusts based on the length of the message.
+- **Interactive Experience:** Engage with both puzzle-solving and QR code scanning in one seamless process.
+- **User-Friendly Interface:** Simple and intuitive design for ease of use with online app.
+
+## Run app locally
+If you want to run the PCB Lullaby streamlit app locally. Two  solutions are possible:
+1. **Run the app directly in a virtual environnement**
+    
+    clone repository:
+    ```
+    git clone https://github.com/azerty-labs/NonogramQR.git
+    cd NonogramQR
+    ```
+    Create, activate and install your environnement:
+    ```
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
+    Run the app using streamlit:
+    ```
+    streamlit run streamlit-app.py
+    ```
+2. **Run the app using docker**
+
+    Build the `nonogram-qr` docker container:
+    ```
+    docker build -t nonogram-qr .
+    ````
+    Run the container at a specified port (here 8501) 
+    ```
+    docker run -p 8501:8501 nonogram-qr
+    ```
+    Go to your web browser and access [localhost:8501](http://localhost:8501)
+  
+## Python API
+
+In order to use the NonogramQR code please do the following: 
 ```
-git clone https://github.com/azerty-labs/QR-Gram.git
-cd QR-Gram/
+git clone https://github.com/chloelavrat/NonogramQR.git
+cd NonogramQR/
 python -m venv venv
 source ./venv/bin/activate
-python pip install itertools pyqrcode argparse
-python qr-gram.py
+python pip install -r requirements.txt
+python NonogramQR.py "My message to encode"
 ```
-
-## Help ?
-
-Need help? Use the `-h` command to get some.
-
+Then you can start using the code to generate your NonogramQR PDF.
 ```
-$ python qr-gram.py -h
-usage: qr-gram.py [-h] [message ...]
+$ python NonogramQR.py -h
+usage: NonogramQR.py [-h] [--output OUTPUT] [message ...]
 
-This script change a string into a QR-Code and then convert it into a nonogram.
+Convert a string into a QR code and then into a nonogram PDF.
 
 positional arguments:
-  message     put the message to encode here
+  message          Message to encode
 
 options:
-  -h, --help  show this help message and exit
+  -h, --help       show this help message and exit
+  --output OUTPUT  Output PDF file name
 
-have fun :)
+Have fun!
 ```
+## Contributing
 
-## Example
+The NonogramQR project is an open-source project, and contributions are always welcome. If you would like to contribute to the project, you can do so by submitting a pull request or by creating an issue on the project's GitHub page.
 
-This is an example of what qr-gram can do after lauching:
+## License
 
-```
-$ python qr-gram.py ":)"
-```
-
-Here we go : 
-```
-$ python qr-gram.py ":)"
->>> String to encode: :)
-                      1 1                                
-                    1 3 3             1         1 1      
-                    3 1 1         3 3 1 4       3 3 1    
-                  1 1 1 2 1 7   2 1 1 1 3   7   1 1 3 1  
-                  1 2 2 1 1 1   1 2 1 1 1   1   2 1 1 1 7
-                7 2 1 1 1 2 1 1 1 3 1 1 1 2 4 1 2 3 1 1 2
-                3 1 3 3 3 1 1 1 3 1 2 2 3 2 1 1 1 3 3 1 1
-                7 1 1 1 1 1 7 1 2 1 2 2 1 2 2 4 1 1 5 2 2
-        7 2 1 7
-      1 1 4 1 1
-1 3 1 3 1 1 3 1
-1 3 1 1 1 1 3 1
-1 3 1 1 1 1 3 1
-        1 1 1 1
-      7 1 1 1 7
-            1 1
-      2 2 2 1 2
-      2 1 1 1 1
-  3 4 1 1 1 1 1
-    1 3 1 4 2 1
-      1 1 4 1 3
-        3 1 2 1
-      7 1 2 4 1
-      1 1 1 1 3
-1 3 1 1 2 2 2 1
-    1 3 1 1 2 3
-    1 3 1 2 3 3
-    1 1 2 2 1 3
-```
-
-Note the apparition of a neat csv file named `./my-nono.csv` for easy excel and word integration!
-
-## Sources
-
-[Reddit - r/dailyprogrammer]( https://www.reddit.com/r/dailyprogrammer/comments/42lhem/20160125_challenge_251_easy_create_nonogram/)
-
-[Reddit - TheBlackCat13]( https://www.reddit.com/user/TheBlackCat13/)
-
-[PyPi - PyQRCode](https://pypi.org/project/PyQRCode/)
+The NonogramQR project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

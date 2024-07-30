@@ -87,7 +87,7 @@ def export_counts_to_pdf(matrix, output_pdf):
     )
 
     # Create document elements
-    title = Paragraph("QR-GRAM", title_style)
+    title = Paragraph("NonogramQR", title_style)
     subtitle = Paragraph("Designed by Chloé Lavrat", subtitle_style)
     footer = Paragraph("www.chloelavrat.com", footer_style)
     table = Table(table_data)

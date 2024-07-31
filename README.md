@@ -7,7 +7,7 @@
   •
   <b><a href="#python-api">Python API</a></b>
   •
-  <b><a href="http://www.youtube.com/watch?v=_3DP3HD8CqY">Demo</a></b>
+  <b><a href="./assets/NonogramQR.pdf">Demo</a></b>
 </h3>
 
 <div align="center">

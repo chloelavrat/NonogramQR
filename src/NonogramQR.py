@@ -67,7 +67,7 @@ def export_counts_to_pdf(matrix, output_pdf):
         name='Subtitle',
         fontSize=10,
         alignment=2,  # Right alignment
-        spaceAfter=20
+        spaceAfter=50
     )
     table_style = TableStyle([
         ('BACKGROUND', (0, 0), (-1, 0), colors.white),  # Header background

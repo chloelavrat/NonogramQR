@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="CTA.png" alt="Banner" style="border-radius: 17px; width: 100%; max-width: 800px; height: auto;">
+  <img src="./assets/readme_banner.png" alt="Banner" style="border-radius: 17px; width: 100%; max-width: 800px; height: auto;">
 </div>
 
 <h3 align="center">
@@ -7,7 +7,7 @@
   •
   <b><a href="#python-api">Python API</a></b>
   •
-  <b><a href="./assets/NonogramQR.pdf">Demo</a></b>
+  <b><a href="https://github.com/chloelavrat/NonogramQR/assets/NonogramQR.pdf">Demo</a></b>
 </h3>
 
 <div align="center">

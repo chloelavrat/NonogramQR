@@ -7,7 +7,7 @@
   •
   <b><a href="#python-api">Python API</a></b>
   •
-  <b><a href="https://github.com/chloelavrat/NonogramQR/assets/NonogramQR.pdf">Demo</a></b>
+  <b><a href="https://nonogramqr.streamlit.app">Demo</a></b>
 </h3>
 
 <div align="center">
